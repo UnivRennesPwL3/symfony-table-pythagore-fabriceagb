@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}My Application{% endblock %}</title>
-    </head>
-    <body>
-        {% block body %}
-       	    <div id="content">
-                {% block content %}{% endblock %}
-            </div>
-        {% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}My Application
+			{% endblock %}
+		</title>
+		<style>
+			table {
+				border: 1px solid #ccc;
+				width: 50%;
+				border-collapse: collapse;
+				margin: 25px 0;
+				font-size: 18px;
+				text-align: left;
+			}
+
+			th,
+			td {
+				border: 1px solid #ccc;
+				padding: 12px;
+				border-bottom: 1px solid #ddd;
+			}
+
+			th {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+	<body>
+		{% block body %}
+			<div id="content">
+				{% block content %}{% endblock %}
+			</div>
+		{% endblock %}
+	</body>
 </html>
